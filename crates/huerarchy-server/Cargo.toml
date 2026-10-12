@@ -1,0 +1,36 @@
+[package]
+name = "huerarchy-server"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "SQLite persistence and MCP server for Huerarchy"
+
+[[bin]]
+name = "huerarchy"
+path = "src/main.rs"
+
+[lib]
+name = "huerarchy_server"
+path = "src/lib.rs"
+
+[dependencies]
+huerarchy-core = { workspace = true }
+rusqlite = { workspace = true }
+tokio = { workspace = true }
+rmcp = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+clap = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+schemars = { workspace = true }
+thiserror = { workspace = true }
+chrono = { workspace = true }
+uuid = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }
+tokio = { workspace = true, features = ["test-util"] }

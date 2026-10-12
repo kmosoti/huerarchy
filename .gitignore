@@ -1,0 +1,25 @@
+# Build artifacts
+/target/
+
+# Database files
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+
+# Runtime session directories
+.agy-runs/
+scratch/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# OS / Editor artifacts
+.DS_Store
+Thumbs.db
+*.swp
+*~
