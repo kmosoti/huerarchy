@@ -1,0 +1,7 @@
+{
+  "audit_date_utc": "2026-10-24T00:23:32.200945+00:00",
+  "claims": 32,
+  "hardware_status": "Razer and Dell were not accessed or modified",
+  "method": "Primary research, official documentation, registry/channel metadata and observed runtime; paper results are not marked replicated",
+  "replication_status": "See results for the experiments actually executed"
+}

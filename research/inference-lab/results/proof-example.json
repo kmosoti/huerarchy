@@ -1,0 +1,30 @@
+{
+  "epoch": 99,
+  "proof_dag": [
+    {
+      "fact_id": 19997,
+      "kind": "snapshot_seed",
+      "node": 4999,
+      "source_event": {
+        "epoch": 95,
+        "health": "unhealthy",
+        "id": 95294,
+        "issue": "certificate expired",
+        "node": 4999,
+        "source": "monitor-3",
+        "timestamp_ms": 1800009529400
+      },
+      "source_sha256": "ee5148b6ea1d98071908eaa5137304067467c61400b1179e135c5d755519d442"
+    },
+    {
+      "fact_id": 19999,
+      "kind": "derived_impact",
+      "node": 4999,
+      "premises": [
+        19997
+      ],
+      "rule_id": 4999
+    }
+  ],
+  "target_fact": 19999
+}

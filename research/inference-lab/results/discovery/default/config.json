@@ -1,0 +1,51 @@
+{
+  "assumed_noise": 0.1,
+  "changes": [
+    80,
+    160
+  ],
+  "complexity_penalty": 0.6931471805599453,
+  "components": {
+    "expander": "compositional",
+    "library": "shared-patterns",
+    "policy": "questions",
+    "teacher": "noisy",
+    "world": "workshops"
+  },
+  "confirmation": 32,
+  "curricula": 6,
+  "diagnostics": true,
+  "expanded_limit": 128,
+  "exploration": 0.1,
+  "fit_window": 64,
+  "fixture_seed": 42,
+  "minimum_observations": 32,
+  "noise_rates": [
+    0.0,
+    0.1,
+    0.2
+  ],
+  "promotion_margin": 2.302585092994046,
+  "proposal_interval": 16,
+  "proposal_limit": 2000,
+  "scene_count": 64,
+  "schema": 1,
+  "search_context_budget": 1000000,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "steps": 240,
+  "variants": [
+    "small-reset",
+    "broad-upfront",
+    "adaptive",
+    "adaptive-library",
+    "library-random",
+    "library-progress"
+  ],
+  "workers": 3
+}

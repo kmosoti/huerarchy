@@ -1,0 +1,696 @@
+{
+  "schema": 1,
+  "repository": "kmosoti/huerarchy",
+  "archive": {
+    "name": "inference-lab-pilot.tar.gz",
+    "bytes": 3086546741,
+    "sha256": "290d1fbe7e4cb25ccb342bc7714317cb409c8f8824a031ac0fedfec94f260ee4"
+  },
+  "parts": [
+    {
+      "name": "inference-lab-pilot.tar.gz.part01",
+      "bytes": 805306368,
+      "sha256": "7211fbe29396eb40f4eadccf2af8ec0b1f975b7fe6f3e2f733761b651c6103b4"
+    },
+    {
+      "name": "inference-lab-pilot.tar.gz.part02",
+      "bytes": 805306368,
+      "sha256": "3854fe6dac8a6ff28cba7d32fdbba75d9e928c0f20f5709a50628e8418c89f41"
+    },
+    {
+      "name": "inference-lab-pilot.tar.gz.part03",
+      "bytes": 805306368,
+      "sha256": "fb0c8e67196ccbae2a0dfe30ca03419c6c506ddf412ca34adbd16e17437645bc"
+    },
+    {
+      "name": "inference-lab-pilot.tar.gz.part04",
+      "bytes": 670627637,
+      "sha256": "76b419119bcff0fd451dbc7b97258458a47b02db553252fac7585b168ddecbd2"
+    }
+  ],
+  "archived_files_omitted_from_git": [
+    {
+      "path": "data/context.json",
+      "bytes": 904988,
+      "sha256": "68010b174fd3f7f123f6d67c136ea9abba8152fdb20ec00c60cce22f658288ff"
+    },
+    {
+      "path": "data/documents.jsonl",
+      "bytes": 1192240,
+      "sha256": "ce24579249b49e4c10ba6a0a3d2fc01a51ac86641c93c86be278e4d2256e9b30"
+    },
+    {
+      "path": "data/events.jsonl",
+      "bytes": 13048080,
+      "sha256": "5394d87e901307f876f9d5fd12bc221e4431277572eb56ee237c4574dba48d76"
+    },
+    {
+      "path": "data/events.sqlite",
+      "bytes": 31068160,
+      "sha256": "6b1690a3cc2aeb95dafb1dc578c7616a8b19bc06002885a8dfb5ee568b5edcbb"
+    },
+    {
+      "path": "data/manifest.json",
+      "bytes": 745,
+      "sha256": "f0c27c31c9a15c9479637a18ac6c8e1b4c656dcb7ddfde1d7aa27599e2676b12"
+    },
+    {
+      "path": "data/queries.jsonl",
+      "bytes": 1407559,
+      "sha256": "3dcbc86cc04c0abf8856868298723290b43e670fd108be35d4e8bbb2afe79b28"
+    },
+    {
+      "path": "data/snapshot-program.txt",
+      "bytes": 230559,
+      "sha256": "f6870ea0d0405cb5bef5ac21f6c60ceb447ae9be5197b8bc2dc4fa4debd1c5c8"
+    },
+    {
+      "path": "data/snapshot-sources.npy",
+      "bytes": 4000128,
+      "sha256": "27feb303fe1496421b2fdef4e8bc6417e1b4cc779e7d326ad05ab209847e104e"
+    },
+    {
+      "path": "data/snapshots.npy",
+      "bytes": 500128,
+      "sha256": "a7df99a57ff4216c999b7a72e1afb7903a47150ca7869ea0d0f4cf9867c058ed"
+    },
+    {
+      "path": "results/active/default/blocks/core-000/events.jsonl.gz",
+      "bytes": 238390,
+      "sha256": "444114799f6fcad7666d7c7ce6861e486c27e249ebb4b88d580586265ebe640d"
+    },
+    {
+      "path": "results/active/default/blocks/core-000/memory.sqlite",
+      "bytes": 367931392,
+      "sha256": "4686d61dde24c31fc1ec9019b3e15af10fd7e4319a806424dcd7908698df7414"
+    },
+    {
+      "path": "results/active/default/blocks/core-000/trace.jsonl.gz",
+      "bytes": 33870382,
+      "sha256": "1c6c1ce63d6fddffa13aa4a901acbd7ee34cccad1e326a83c92fb94934e86538"
+    },
+    {
+      "path": "results/active/default/blocks/core-000/worlds.json.gz",
+      "bytes": 115417,
+      "sha256": "d688dd6f0d7149c29fd11b6498e19d80d326815f93fe38e65c4cdff6602d00fb"
+    },
+    {
+      "path": "results/active/default/blocks/core-001/events.jsonl.gz",
+      "bytes": 240655,
+      "sha256": "8f8f765b5d9c8bd33122a04264c48a568f5f11ead5bc5465e1196a1a6c451d44"
+    },
+    {
+      "path": "results/active/default/blocks/core-001/memory.sqlite",
+      "bytes": 365129728,
+      "sha256": "b3a2bb6febbc0b5ba96e598dfa569d3577323b959fec9beae8ee253988a666d1"
+    },
+    {
+      "path": "results/active/default/blocks/core-001/trace.jsonl.gz",
+      "bytes": 34471909,
+      "sha256": "c0eda27fb432f30ce6a90156fd0c628cd84905b862ced90f91601d6d682658a0"
+    },
+    {
+      "path": "results/active/default/blocks/core-001/worlds.json.gz",
+      "bytes": 114179,
+      "sha256": "5efd589d7c9731123131f8e632892785c551f06704d87798e18c21e790ee071c"
+    },
+    {
+      "path": "results/active/default/blocks/core-002/events.jsonl.gz",
+      "bytes": 239312,
+      "sha256": "32988a49402bbd63a3321b5ef64ebc00333490a429be000e549a4635d541d988"
+    },
+    {
+      "path": "results/active/default/blocks/core-002/memory.sqlite",
+      "bytes": 376446976,
+      "sha256": "8f34812a9cc329afd3de06537fbc84de899ef668bc5ab0931aafee252235caa3"
+    },
+    {
+      "path": "results/active/default/blocks/core-002/trace.jsonl.gz",
+      "bytes": 34369638,
+      "sha256": "65cf5b4c7a2518af9adcaf5d0e2faf6467f1a5b1864c3b27d6dd3d9c65bc9a53"
+    },
+    {
+      "path": "results/active/default/blocks/core-002/worlds.json.gz",
+      "bytes": 113912,
+      "sha256": "4f31615f23102b38088e418450bc8ec24c76c6999b4db703ee4a76b479b64bdc"
+    },
+    {
+      "path": "results/active/default/blocks/core-003/events.jsonl.gz",
+      "bytes": 244857,
+      "sha256": "9f939a7b53891c39d346c6029c123394e088d8f7df716a343f5a93f515cdd86a"
+    },
+    {
+      "path": "results/active/default/blocks/core-003/memory.sqlite",
+      "bytes": 369295360,
+      "sha256": "a43d96ed22a266fd212528140324937ea4f15fdabe6e3856c6ec120d6c881f21"
+    },
+    {
+      "path": "results/active/default/blocks/core-003/trace.jsonl.gz",
+      "bytes": 33542531,
+      "sha256": "054d3465065de9fc411b9a50bbacaa1518e9373de402e51082a8f125ed703ce5"
+    },
+    {
+      "path": "results/active/default/blocks/core-003/worlds.json.gz",
+      "bytes": 114955,
+      "sha256": "10f7892e7e2544f00effece44e909e78da8c13ecbef14e622c86d29074557cda"
+    },
+    {
+      "path": "results/active/default/blocks/core-004/events.jsonl.gz",
+      "bytes": 245330,
+      "sha256": "42751bef657237788ce566b7ce10936fb596d3fea6cd576f51fcd1821abb40e9"
+    },
+    {
+      "path": "results/active/default/blocks/core-004/memory.sqlite",
+      "bytes": 374390784,
+      "sha256": "f01151fa09ea3ddce9aa45efe91ecacc97f2f732e0c7481dbd671713bdc5093b"
+    },
+    {
+      "path": "results/active/default/blocks/core-004/trace.jsonl.gz",
+      "bytes": 33936075,
+      "sha256": "43b2502fcf86664fef1b104f852bc628d741ec835e1d17be401851231477d6e0"
+    },
+    {
+      "path": "results/active/default/blocks/core-004/worlds.json.gz",
+      "bytes": 116630,
+      "sha256": "aa66c228b38cebb20225a15e7f95020c5ab3127e5cfe70db0c6ebc242ebdbedc"
+    },
+    {
+      "path": "results/active/default/blocks/core-005/events.jsonl.gz",
+      "bytes": 242978,
+      "sha256": "e7543334ceb45730f40b345458bc26c167c8307ced11c51f8f4ba9936dca003a"
+    },
+    {
+      "path": "results/active/default/blocks/core-005/memory.sqlite",
+      "bytes": 372748288,
+      "sha256": "1c40595fecc77e48949da5eed24e0041ef909e5a3f4cbce4a10b68324beeb046"
+    },
+    {
+      "path": "results/active/default/blocks/core-005/trace.jsonl.gz",
+      "bytes": 34169180,
+      "sha256": "da0b3a75c13cfbb650d9aa8745521e7cecffa3735e337f44fc740768d3f431d6"
+    },
+    {
+      "path": "results/active/default/blocks/core-005/worlds.json.gz",
+      "bytes": 114982,
+      "sha256": "a8cd3617a1dfc25b6c3ab6c67caca34e5403feeac2271ffc090ed3f1efbde65c"
+    },
+    {
+      "path": "results/active/default/blocks/core-006/events.jsonl.gz",
+      "bytes": 244885,
+      "sha256": "f9cfa27a793e418f7bc4963793c7536784c92aae573c5e12d45aaaa10d8f2539"
+    },
+    {
+      "path": "results/active/default/blocks/core-006/memory.sqlite",
+      "bytes": 369123328,
+      "sha256": "ba152b27ef99e0730495882dbc0a09503887c17de51696f5512c329309ca215d"
+    },
+    {
+      "path": "results/active/default/blocks/core-006/trace.jsonl.gz",
+      "bytes": 33328081,
+      "sha256": "b385ed33aaf8016844102245ae05bb8d5835d8c6cd065aff9c862deac501b9c2"
+    },
+    {
+      "path": "results/active/default/blocks/core-006/worlds.json.gz",
+      "bytes": 114919,
+      "sha256": "26366932dc83b0490663d2dc78bececd509ca4dc78c8cc67d8a078d5904022b1"
+    },
+    {
+      "path": "results/active/default/blocks/core-007/events.jsonl.gz",
+      "bytes": 243820,
+      "sha256": "bdafc0f295a6769abf878d5659966ba9a9b69929dd71879873cc61d2290a60d2"
+    },
+    {
+      "path": "results/active/default/blocks/core-007/memory.sqlite",
+      "bytes": 369598464,
+      "sha256": "c80ab26cb44b1080ed9dadb74af53719fd414c4bb5727f6fc2280e475a1fa282"
+    },
+    {
+      "path": "results/active/default/blocks/core-007/trace.jsonl.gz",
+      "bytes": 34147475,
+      "sha256": "107d8881890d0b7fb30e62c3b0d60e96cc6138c284c4e514fff36df1002c4864"
+    },
+    {
+      "path": "results/active/default/blocks/core-007/worlds.json.gz",
+      "bytes": 116314,
+      "sha256": "10a017b304fd226918aa4748b94f0e6ca961a67c4ff6418d5059db66b00b0869"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-000/events.jsonl.gz",
+      "bytes": 20885,
+      "sha256": "7d0402084230f01e40734245493f2b3b3bf13f956d5129154ebd8215416e4e7c"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-000/memory.sqlite",
+      "bytes": 39710720,
+      "sha256": "e39247fd519f6d1fcc883773d1af1b40278de060bbf14419e6c22ad4a7007056"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-000/trace.jsonl.gz",
+      "bytes": 2950053,
+      "sha256": "f7571f5789d38f1788b47fa699520a6a982b45b88181bf0f07f0df3508360e07"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-000/worlds.json.gz",
+      "bytes": 62504,
+      "sha256": "4f022aec37a934ad4154c39fac92e9b13f2fbcd8e8a07457260aa6032b9304dc"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-001/events.jsonl.gz",
+      "bytes": 21070,
+      "sha256": "85735e1cb5dbf6951edb620384bef0b9d3a349cac24969553de0a9259220c965"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-001/memory.sqlite",
+      "bytes": 39297024,
+      "sha256": "9afccf5807194d3e0bb394fab571efae1395250890395406b1e05fad209a0e2a"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-001/trace.jsonl.gz",
+      "bytes": 2974487,
+      "sha256": "57ffd41c88e635efadcb0ef5e4904b2af3f4f082a3dc7ac52f3051dbac07735a"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-001/worlds.json.gz",
+      "bytes": 62924,
+      "sha256": "520350915751b28ec0cd5c15084f064647b1e8edd75d8dd2d434964f15dbc428"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-002/events.jsonl.gz",
+      "bytes": 21112,
+      "sha256": "2b53dbb804de9bc8344937cc6534de438851fd5fc8bd6aefde4af8b91449a2cc"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-002/memory.sqlite",
+      "bytes": 39104512,
+      "sha256": "5437379c531fadd4c75f0ca2a467fb9ff5c0bc9c614bc9e0795ededc0073589c"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-002/trace.jsonl.gz",
+      "bytes": 2952640,
+      "sha256": "d5c83d813423d141c13900de91e4f4bf2eaaab025ac076734320a80319a3c5a0"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-002/worlds.json.gz",
+      "bytes": 62973,
+      "sha256": "655e91fdec0be0f329b84936397320bb5c490f8c979e599ccce55ed9fbbbece1"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-003/events.jsonl.gz",
+      "bytes": 21406,
+      "sha256": "edcef63c058958410de94eb13973be64c2328042c02f412213f280254c59edd1"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-003/memory.sqlite",
+      "bytes": 39215104,
+      "sha256": "f74f85007188f1210d788ee48cce8bfc48d1ec1c09867a5024679784d8dc8793"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-003/trace.jsonl.gz",
+      "bytes": 3120974,
+      "sha256": "293b4b9c6d2c4cf006f5455f476f245f7271c1eb760e4cfc6535605e94e0921c"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-003/worlds.json.gz",
+      "bytes": 62305,
+      "sha256": "cc54a455e1d29ed9767e1b0dd0a8e46dbc8de69dfa71c48b7ac349027d0fe7df"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-004/events.jsonl.gz",
+      "bytes": 21743,
+      "sha256": "d71fc18966d9620b29efe8e10536bcd843261840c7693785a1c49459ef6c196e"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-004/memory.sqlite",
+      "bytes": 38158336,
+      "sha256": "0ec9ebad3e84490c6a76eb02cf3979de63898374662c123651a73177632214f9"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-004/trace.jsonl.gz",
+      "bytes": 2924243,
+      "sha256": "16d1db5982758f3421bb6388c4a9903e5b6541ec5ae2a88b0455cf302bedfb68"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-004/worlds.json.gz",
+      "bytes": 62193,
+      "sha256": "dab8fdaff35654d46357dec44e9c4ed09eb6499bb3ba385741e335671dc724da"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-005/events.jsonl.gz",
+      "bytes": 21532,
+      "sha256": "d935d24615923e1413312e5db9be7faf230250429aea28177f95099de7d08338"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-005/memory.sqlite",
+      "bytes": 38596608,
+      "sha256": "6aaff314b4a67b1b4e592ca74457873f5f5127ef2f5eca06765198897067afb9"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-005/trace.jsonl.gz",
+      "bytes": 2853653,
+      "sha256": "9c01fb141cbb976175e4886041716f07c8f224da7c3526c3bb68cef1ed082f20"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-005/worlds.json.gz",
+      "bytes": 62107,
+      "sha256": "04cea7c5d11d8016ab8b323f4c0c7a03eac2bc538cdb0c7a03e182b503efb13a"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-006/events.jsonl.gz",
+      "bytes": 21724,
+      "sha256": "e6669b1ee5c1882f99049942cb2c0712f60671405f238a29bb91b676e13147f8"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-006/memory.sqlite",
+      "bytes": 38834176,
+      "sha256": "0458f44c5134c8a30cb139d2cebd2603836330969d87f99b579931d05dff8587"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-006/trace.jsonl.gz",
+      "bytes": 3068662,
+      "sha256": "ee12d0f8f9764037b2dfb13fcf3d9dfe26aa5e2dd47f9e727ecda22d72aea4dd"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-006/worlds.json.gz",
+      "bytes": 62260,
+      "sha256": "e31cd8d4f519088bbb74c90ba834a64d0ee6cdf44998cd63f4bb1b656a3d96c8"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-007/events.jsonl.gz",
+      "bytes": 21896,
+      "sha256": "e249f6f1d812374e642e113bce79dac9e46c18eb08092b44731c8b3c77243108"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-007/memory.sqlite",
+      "bytes": 38080512,
+      "sha256": "9bdf8a216079e26ad66e2018e1e7d397804329cccac1776bea7ea5099950488e"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-007/trace.jsonl.gz",
+      "bytes": 3157819,
+      "sha256": "39c12afaf7954c7767b666a844aae36df2f813137ebc5df358d2fce75fa530f7"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-007/worlds.json.gz",
+      "bytes": 62810,
+      "sha256": "b0eed23d87acbd6e96e2fdfb22104e73d585c55826dd716883d8d1e28a021c8f"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-008/events.jsonl.gz",
+      "bytes": 21930,
+      "sha256": "4d3227eb33773216de3f92663aa1be681f7fd3deecf4821f0e512c67232fd721"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-008/memory.sqlite",
+      "bytes": 38719488,
+      "sha256": "ed2e921eee03e210f5e997a2732ba6dff97939960669af5dfa563574b0eb144b"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-008/trace.jsonl.gz",
+      "bytes": 2993803,
+      "sha256": "770aea4c469760ba82d371d5a10cdb832a9cef426756377fc45cdeb9e3e43c66"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-008/worlds.json.gz",
+      "bytes": 62119,
+      "sha256": "ef87cb82d30267d6888800d548665281f48f00fa37851d9fc3b1bb49e5650550"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-009/events.jsonl.gz",
+      "bytes": 22086,
+      "sha256": "f9c2bc0d1cf513af755734a31747d288824a12f9f805bfaad5d203001f080949"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-009/memory.sqlite",
+      "bytes": 38588416,
+      "sha256": "7eb37b412aeb7a4d31506e6ec5ecc1d79f0d0a3e2a1612d5fedcf28d0f9d9bdd"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-009/trace.jsonl.gz",
+      "bytes": 2840842,
+      "sha256": "689b4fc0c50774f94369ea87966e2e38cd4ea5a0dea9f0245d6fe82bb14f2474"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-009/worlds.json.gz",
+      "bytes": 62971,
+      "sha256": "689a4b244bf28f0f18b8364b5e6691754d140f118ca1ef129b70be92e5fd0297"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-010/events.jsonl.gz",
+      "bytes": 21981,
+      "sha256": "9d94f1d5c682eb03c04ca74c53e77713ef235eb67cdd3a70a570ab259524d7bf"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-010/memory.sqlite",
+      "bytes": 38625280,
+      "sha256": "bd12eb64d9c01608ee974de9dfbb1f096659d48eaa0fc3e5dd2838c5fc159529"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-010/trace.jsonl.gz",
+      "bytes": 3000995,
+      "sha256": "b5bee688e8eeabed9e88b53d464debc3bf52b175c0533ccc560880ddccd889ca"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-010/worlds.json.gz",
+      "bytes": 61817,
+      "sha256": "47b69e7d367907402fb097f250ee40be979dc2b4812b9b8806c64832618a5459"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-011/events.jsonl.gz",
+      "bytes": 21981,
+      "sha256": "d977c00949bad41a316f938e300ee92505b22d68b3ec1e5e4c472b7559643e49"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-011/memory.sqlite",
+      "bytes": 38453248,
+      "sha256": "a4391dbb4b0d00c17811a165a161dbf47af46420b0efa7bcca03db715cac15ed"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-011/trace.jsonl.gz",
+      "bytes": 3067555,
+      "sha256": "2b643184068a50b1c79fa4f68faa2e3c781552c1e4f42e5a0a48d7c7a6cbaa97"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-011/worlds.json.gz",
+      "bytes": 62321,
+      "sha256": "5d34c4d5477dba008fa5c19a88abd895ecf766503de10de515470d9fd11929d7"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-012/events.jsonl.gz",
+      "bytes": 21985,
+      "sha256": "a71483487491233750ed1898ff5393e6784732cdd9cb6f247f36f3c07ded844a"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-012/memory.sqlite",
+      "bytes": 39641088,
+      "sha256": "887be0f25f194b70b80e54c1b65729fb621d725113d0fc89e4ee273ac4e13441"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-012/trace.jsonl.gz",
+      "bytes": 2865899,
+      "sha256": "0186632299b3ee30de7fde81714257550d0ee1b0655b50de28cdd5dca8b501cb"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-012/worlds.json.gz",
+      "bytes": 61808,
+      "sha256": "34adfc898e2a2a741842dbf1ef7269612d5fdeb8239b06fc108736b748f62b48"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-013/events.jsonl.gz",
+      "bytes": 22043,
+      "sha256": "8c688b4ed443a304adec9d9e24391e059692b13b383f9c52b2e13ad650140a64"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-013/memory.sqlite",
+      "bytes": 39591936,
+      "sha256": "b396538bd9ee907c5030b34121e389f766da76e62a89c90d3349587ad5f9dc99"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-013/trace.jsonl.gz",
+      "bytes": 2988372,
+      "sha256": "1462dea1c44cc6cee476f79767655571470eee14793f8e850c5f60b429304a20"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-013/worlds.json.gz",
+      "bytes": 61987,
+      "sha256": "058ea4492e61ac5b9b7899c8f1707707243326e2a2df054a30aabde28741649c"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-014/events.jsonl.gz",
+      "bytes": 22240,
+      "sha256": "7c73633663c212a5f636d7f44f494810b3cd4235a067513b0d8c371cc2751218"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-014/memory.sqlite",
+      "bytes": 39755776,
+      "sha256": "54e5efde57b6a9318e2b12f7a5b4c1a131767b696b4b3a02f7e4f495ab2823e2"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-014/trace.jsonl.gz",
+      "bytes": 3102559,
+      "sha256": "08924eb4ef2ec2aa4570836eabd927e60268a6e5947dcd9106e1ba8e487bd63f"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-014/worlds.json.gz",
+      "bytes": 62851,
+      "sha256": "5e55b0241f3f07333f56302a70f1e3f996f295b2f31f3fc1e01ac0589d2dd7bf"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-015/events.jsonl.gz",
+      "bytes": 22175,
+      "sha256": "f5075f42dc23dfa3c786052f447f9e651c6826108a051926e4ce99bcd1ec4873"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-015/memory.sqlite",
+      "bytes": 39309312,
+      "sha256": "0a332f8e6aaa2316cc64ed29c5fa7a9b2f75498d4d32cbfa27b0d478ad42b1e4"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-015/trace.jsonl.gz",
+      "bytes": 2976395,
+      "sha256": "232dbb23aed666b233c2480c9e80e31fa3754b1acbbb6f9aba84a977bd058c42"
+    },
+    {
+      "path": "results/active/default/blocks/transfer-015/worlds.json.gz",
+      "bytes": 62077,
+      "sha256": "7823f0b8f4971d1049b1b3e9390c99af4f8a1e48ee9ca13c1228314092ed2a9d"
+    },
+    {
+      "path": "results/active/default/pilot/core/events.jsonl.gz",
+      "bytes": 28634,
+      "sha256": "84315aef153adf9de1436d5ab78086d28ab068f3eb09c344e2fe3c9605f28f66"
+    },
+    {
+      "path": "results/active/default/pilot/core/memory.sqlite",
+      "bytes": 41836544,
+      "sha256": "0dbce8d9544efd7219e39fe27eb4b3f22e4652f1d1ac86d957f4eb6a6ae5acf4"
+    },
+    {
+      "path": "results/active/default/pilot/core/trace.jsonl.gz",
+      "bytes": 3696838,
+      "sha256": "b36f8b86a273e4d2dc04141ab2a9e3f2d941fc2b96376377b0e6aad5d72d2b17"
+    },
+    {
+      "path": "results/active/default/pilot/core/worlds.json.gz",
+      "bytes": 115140,
+      "sha256": "0fee3f244c26e2af1b79b044fc799f562491cf1926247e9380be44d1773cb5b5"
+    },
+    {
+      "path": "results/active/default/pilot/transfer/events.jsonl.gz",
+      "bytes": 2688,
+      "sha256": "b31fe4869d1c8e8f6fbf4383b827bbf1721ce1337356df6fbe1afeee59a11d63"
+    },
+    {
+      "path": "results/active/default/pilot/transfer/memory.sqlite",
+      "bytes": 4177920,
+      "sha256": "1d660e80d263a16ba320ad0c77011c4f7fa70a50064c2230e17318b89d0fdafb"
+    },
+    {
+      "path": "results/active/default/pilot/transfer/trace.jsonl.gz",
+      "bytes": 323823,
+      "sha256": "18766169bd7385e5bfe44002d1d5fd139a99f98d1a8774105c49dcd9c0bd24fa"
+    },
+    {
+      "path": "results/active/default/pilot/transfer/worlds.json.gz",
+      "bytes": 61740,
+      "sha256": "d73fd365d78278ec8ce98888ef689744a6d9db4a597ecb9c314cfb8981db5e27"
+    },
+    {
+      "path": "results/active/smoke/blocks/core-000/events.jsonl.gz",
+      "bytes": 3351,
+      "sha256": "bc13a5e4d2ec9ca97a3e0e17db883f6af9c9c20b32910d46c369509c3f21bc8b"
+    },
+    {
+      "path": "results/active/smoke/blocks/core-000/memory.sqlite",
+      "bytes": 12697600,
+      "sha256": "34d501ead92728e2ee839e27e721a34e219a1d480535a37605e4a3e7a1417f83"
+    },
+    {
+      "path": "results/active/smoke/blocks/core-000/trace.jsonl.gz",
+      "bytes": 555372,
+      "sha256": "56a5131811119b2c2fba8643aa97adc10650e2dbd4b288e223879613c76c7f58"
+    },
+    {
+      "path": "results/active/smoke/blocks/core-000/worlds.json.gz",
+      "bytes": 24781,
+      "sha256": "11b362656e9276936a4aa8e05fc37560f15e412d69292d2cfd53cacabbb1bf85"
+    },
+    {
+      "path": "results/active/smoke/blocks/transfer-000/events.jsonl.gz",
+      "bytes": 646,
+      "sha256": "106f6f9084998159d83e240cfb5a106d0cfef9b98918bf83479bc8be6a517252"
+    },
+    {
+      "path": "results/active/smoke/blocks/transfer-000/memory.sqlite",
+      "bytes": 1667072,
+      "sha256": "62c5e84231ac6592415af38f2092f543377cddd9b30b2c1158bf05087e733137"
+    },
+    {
+      "path": "results/active/smoke/blocks/transfer-000/trace.jsonl.gz",
+      "bytes": 57491,
+      "sha256": "d4e6f3c8cd89503b84c46b03ca86ac3182d7b50432a77bba671e2c82a4e83aab"
+    },
+    {
+      "path": "results/active/smoke/blocks/transfer-000/worlds.json.gz",
+      "bytes": 12907,
+      "sha256": "01f79f464273c43f522c2711813a59f7a3d8ccb645edaf45f6bc749d97903797"
+    },
+    {
+      "path": "results/discovery/default/events.jsonl.gz",
+      "bytes": 692383,
+      "sha256": "0ce628c3c5a02e1a7444066e901aa84649cae2c1208bb2469f4ac57836bcc5c2"
+    },
+    {
+      "path": "results/discovery/default/memory.sqlite",
+      "bytes": 518328320,
+      "sha256": "87a9d7338df36826624610e70d9591a47ba5d4c0d6843fbc188b575b31fa2186"
+    },
+    {
+      "path": "results/discovery/default/trace.jsonl.gz",
+      "bytes": 31484696,
+      "sha256": "88b28d4e6a9faefdbb1049623b26839eb42051b3ac91f28f2a84db6b1aa80cb3"
+    },
+    {
+      "path": "results/discovery/default/worlds.json.gz",
+      "bytes": 210183,
+      "sha256": "e2c0c16521fcb648c5f028cfded366f4ccdce55f5328c326c4c5440dce1e4932"
+    },
+    {
+      "path": "results/discovery/smoke/events.jsonl.gz",
+      "bytes": 6915,
+      "sha256": "82b788cfe5337d8d4f006e532c48fd254a30080b1efd542cfa94b4e221d98c90"
+    },
+    {
+      "path": "results/discovery/smoke/memory.sqlite",
+      "bytes": 4984832,
+      "sha256": "40187865c4ead38daa066c25d6da866bfdb965a090aa69fe566a26fcbe82c54e"
+    },
+    {
+      "path": "results/discovery/smoke/trace.jsonl.gz",
+      "bytes": 293060,
+      "sha256": "ea76b3b09f7ba442af6bc8f0b2fd309a14b3fa4ac77e34a04a5c7b71a7dd582f"
+    },
+    {
+      "path": "results/discovery/smoke/worlds.json.gz",
+      "bytes": 15473,
+      "sha256": "9180b358d875d5cdb2436a8076904723102b1634ad8a9d11f91a759f4e666300"
+    },
+    {
+      "path": "results/learning/default/memory.sqlite",
+      "bytes": 173944832,
+      "sha256": "91b6131964c110f36b7651299850461c862df06e2612879ab75f932d036658d3"
+    },
+    {
+      "path": "results/learning/default/trace.jsonl.gz",
+      "bytes": 20465241,
+      "sha256": "51043ae8554089e3178f62babfff29d7e42bd7a99201b921b54e9f0c7d19cb41"
+    }
+  ],
+  "planned_release_tag": "research-2026-10-24",
+  "remote_archive_upload": {
+    "status": "incomplete",
+    "endpoint": "uploads.github.com",
+    "http_status": 401,
+    "reason": "Cloud credentials rejected by release asset upload endpoint; Git pushes and PR creation succeeded. No archive assets uploaded."
+  },
+  "workspace_archive_path": "/workspace/inference-lab-pilot.tar.gz"
+}

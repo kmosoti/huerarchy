@@ -1,0 +1,104 @@
+{
+  "artifact_hashes_verified": true,
+  "checkpoints": 12954,
+  "conditional_proofs": 182,
+  "database_integrity_verified": true,
+  "experimental_sources_match": true,
+  "local_report_links_checked": 20,
+  "observations": 3008640,
+  "restored_examples": [
+    {
+      "conditional_prediction": false,
+      "fresh_prediction_cache_matches": true,
+      "library_instances": 0,
+      "next_question": 27,
+      "program_mass": 0.39263803620180604,
+      "run_id": "b0/stable/mechanism-0/noise-0/seed-0/broad-upfront",
+      "rust_python_closure_matches": true,
+      "selection": {
+        "index": 27,
+        "policy": "information",
+        "reason": "maximum expected hypothesis information"
+      },
+      "teacher_answers_acquired": 0
+    },
+    {
+      "conditional_prediction": false,
+      "fresh_prediction_cache_matches": true,
+      "library_instances": 0,
+      "next_question": 4,
+      "program_mass": 0.5307014067319653,
+      "run_id": "b0/stable/mechanism-0/noise-0/seed-0/epig-change",
+      "rust_python_closure_matches": true,
+      "selection": {
+        "exploration": false,
+        "policy": "epig",
+        "score_nats": 0.005306959605507538
+      },
+      "teacher_answers_acquired": 0
+    },
+    {
+      "conditional_prediction": false,
+      "fresh_prediction_cache_matches": true,
+      "library_instances": 0,
+      "next_question": 54,
+      "program_mass": 0.9999999999999999,
+      "run_id": "b0/stable/relay-4/noise-0/seed-0/gate-sequential",
+      "rust_python_closure_matches": true,
+      "selection": {
+        "index": 54,
+        "policy": "information",
+        "reason": "maximum expected hypothesis information"
+      },
+      "teacher_answers_acquired": 0
+    },
+    {
+      "conditional_prediction": false,
+      "fresh_prediction_cache_matches": true,
+      "library_instances": 0,
+      "next_question": 28,
+      "program_mass": 0.5111458076138156,
+      "run_id": "b0/aba/mechanism-0/noise-0/seed-0/epig-change-archive",
+      "rust_python_closure_matches": true,
+      "selection": {
+        "exploration": false,
+        "policy": "epig",
+        "score_nats": 0.004804381259374704
+      },
+      "teacher_answers_acquired": 0
+    },
+    {
+      "conditional_prediction": false,
+      "fresh_prediction_cache_matches": true,
+      "library_instances": 2,
+      "next_question": 55,
+      "program_mass": 0.4472890364615255,
+      "run_id": "b0/transfer/recombined/noise-0/seed-0/library-typed",
+      "rust_python_closure_matches": true,
+      "selection": {
+        "exploration": false,
+        "policy": "epig",
+        "score_nats": 0.008696630148705569
+      },
+      "teacher_answers_acquired": 0
+    },
+    {
+      "conditional_prediction": false,
+      "fresh_prediction_cache_matches": true,
+      "library_instances": 0,
+      "next_question": 63,
+      "program_mass": 0.39337536272663065,
+      "run_id": "b0/transfer/recombined/noise-0/seed-0/library-validated",
+      "rust_python_closure_matches": true,
+      "selection": {
+        "exploration": false,
+        "policy": "epig",
+        "score_nats": 0.008926472953861887
+      },
+      "teacher_answers_acquired": 0
+    }
+  ],
+  "runs": 12954,
+  "rust_reasoner_sha256": "3047c2396eaa2014ef21f0d453ca8e600c11baf7ae7fd387592457aef5c89dfd",
+  "schema": 1
+}

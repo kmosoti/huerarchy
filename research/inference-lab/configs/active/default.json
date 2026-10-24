@@ -1,0 +1,61 @@
+{
+  "archive_limit": 16,
+  "archive_mass": 0.9,
+  "archive_streak": 8,
+  "coin_prior": 0.05,
+  "complexity_penalty": 0.6931471805599453,
+  "components": {
+    "expander": "typed",
+    "library": "templates",
+    "policy": "information",
+    "posterior": "finite",
+    "teacher": "hidden"
+  },
+  "concept_gain": 2.995732273553991,
+  "concept_limit": 8,
+  "core_seconds": 12600,
+  "expanded_limit": 128,
+  "exploration": 0.1,
+  "fixture_seed": 51024,
+  "hazard": 0.01,
+  "noise_grid": [
+    0.01,
+    0.05,
+    0.1,
+    0.2,
+    0.35
+  ],
+  "noise_rates": [
+    0.0,
+    0.1,
+    0.2
+  ],
+  "pilot_seconds": 1800,
+  "proposal_interval": 16,
+  "proposal_limit": 2000,
+  "report_seconds": 1800,
+  "run_branches": 32,
+  "scene_count": 64,
+  "schema": 1,
+  "search_context_budget": 1000000,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "source_steps": 240,
+  "steps": 240,
+  "study_seconds": 21600,
+  "timing_reserve": 0.2,
+  "transfer_seconds": 5400,
+  "validation_steps": 64,
+  "validation_warmup": 32,
+  "window": 64,
+  "workers": 3,
+  "world_counts": [
+    4,
+    8,
+    12,
+    16
+  ]
+}

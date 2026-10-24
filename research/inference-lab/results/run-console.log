@@ -1,0 +1,146 @@
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.03s
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.03s
+     Running unittests src/lib.rs (target/debug/deps/inference_lab-1dc296fbd16fbd5c)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/bench.rs (target/debug/deps/bench-69f7870076ab5869)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/closure.rs (target/debug/deps/closure-ee406779df8e9f7d)
+
+running 5 tests
+test initialization_eager_iteration_lazy_and_fused ... ok
+test relational_join_matches_independent_graph_search ... ok
+test edge_cases_and_proofs ... ok
+test snapshot_recomputation_removes_stale_conclusions ... ok
+test closure_axioms_and_reference_agreement_generated ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.13s
+
+test_invalid_embeddings_fail (test_lab.EmbeddingRepresentationTests.test_invalid_embeddings_fail) ... ok
+test_known_retrieval_metrics_and_fusion (test_lab.EmbeddingRepresentationTests.test_known_retrieval_metrics_and_fusion) ... ok
+test_quantization_and_cosine_ranking (test_lab.EmbeddingRepresentationTests.test_quantization_and_cosine_ranking) ... ok
+test_deterministic_generation_and_independent_oracles (test_lab.FixtureTests.test_deterministic_generation_and_independent_oracles) ... ok
+test_invalid_fixture_configuration (test_lab.FixtureTests.test_invalid_fixture_configuration) ... ok
+test_failures_are_atomic_and_require_resync (test_lab.ReplicaTests.test_failures_are_atomic_and_require_resync) ... ok
+test_round_trip_codecs_and_idempotent_replay (test_lab.ReplicaTests.test_round_trip_codecs_and_idempotent_replay) ... ok
+test_stale_snapshot_cannot_roll_back_state (test_lab.ReplicaTests.test_stale_snapshot_cannot_roll_back_state) ... ok
+test_unknown_identifiers_in_snapshot_and_invalid_health (test_lab.ReplicaTests.test_unknown_identifiers_in_snapshot_and_invalid_health) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.088s
+
+OK
+   Compiling inference-lab v0.1.0 (/workspace/inference-lab)
+    Finished `release` profile [optimized + debuginfo] target(s) in 1.83s
+{
+  "timestamp_utc": "2026-10-24T00:23:29.588362+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "python_executable": "/workspace/inference-lab/.venv/bin/python",
+  "gil_enabled": null,
+  "gil_note": "API absent on Python 3.12; this is the conventional build",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+  "visible_cpus": 5,
+  "cpu_max": "400000 100000",
+  "memory_max": "17179869184",
+  "gpu_devices": [],
+  "sqlite": "3.53.1",
+  "fts5": true,
+  "rust": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+  "packages": {
+    "numpy": "2.5.4",
+    "cbor2": "6.1.5",
+    "zstandard": "0.25.0",
+    "cmake": "4.4.4",
+    "ninja": "1.13.2"
+  },
+  "energy_joules": null,
+  "energy_reason": "No exposed RAPL/powercap energy sensor; CPU time is not energy",
+  "disk_free_bytes": 28645060608,
+  "bitnet_revision": "0b341e582afbf9e1011f24744b554c96a3477eb5",
+  "bitnet_llama_revision": "390c307752ab78fd8189f359d6954c9ba1be74af",
+  "model_revision": "5f1c2fd19f37ca653a3d719c8ee6cc1895f4b64f"
+}
+{
+  "seed": 42,
+  "events": 100000,
+  "nodes": 5000,
+  "queries": 10000,
+  "epochs": 100,
+  "events_per_epoch": 1000,
+  "query_templates_held_out_from_documents": true,
+  "source_sha256": "5394d87e901307f876f9d5fd12bc221e4431277572eb56ee237c4574dba48d76",
+  "documents_sha256": "ce24579249b49e4c10ba6a0a3d2fc01a51ac86641c93c86be278e4d2256e9b30",
+  "queries_sha256": "3dcbc86cc04c0abf8856868298723290b43e670fd108be35d4e8bbb2afe79b28",
+  "snapshot_sha256": "a7df99a57ff4216c999b7a72e1afb7903a47150ca7869ea0d0f4cf9867c058ed",
+  "snapshot_sources_sha256": "27feb303fe1496421b2fdef4e8bc6417e1b4cc779e7d326ad05ab209847e104e",
+  "context_hash": "75f641f870c5bf07581ad0e478dabbdd5d1abc7a2676159661dc58638ac7f63d",
+  "source_provenance_retained": true
+}
+wrote 32 evidence-backed claim assessments
+exact repetition 1/5: 7500/7500 correct
+exact repetition 2/5: 7500/7500 correct
+exact repetition 3/5: 7500/7500 correct
+exact repetition 4/5: 7500/7500 correct
+exact repetition 5/5: 7500/7500 correct
+snapshot closure repetition 1/5: 100 snapshots and proofs verified
+snapshot closure repetition 2/5: 100 snapshots and proofs verified
+snapshot closure repetition 3/5: 100 snapshots and proofs verified
+snapshot closure repetition 4/5: 100 snapshots and proofs verified
+snapshot closure repetition 5/5: 100 snapshots and proofs verified
+communication: json_full complete
+communication: cbor_full complete
+communication: cbor_delta complete
+embedding documents 256/5000
+embedding documents 512/5000
+embedding documents 768/5000
+embedding documents 1024/5000
+embedding documents 1280/5000
+embedding documents 1536/5000
+embedding documents 1792/5000
+embedding documents 2048/5000
+embedding documents 2304/5000
+embedding documents 2560/5000
+embedding documents 2816/5000
+embedding documents 3072/5000
+embedding documents 3328/5000
+embedding documents 3584/5000
+embedding documents 3840/5000
+embedding documents 4096/5000
+embedding documents 4352/5000
+embedding documents 4608/5000
+embedding documents 4864/5000
+embedding documents 5000/5000
+embedding queries 256/2500
+embedding queries 512/2500
+embedding queries 768/2500
+embedding queries 1024/2500
+embedding queries 1280/2500
+embedding queries 1536/2500
+embedding queries 1792/2500
+embedding queries 2048/2500
+embedding queries 2304/2500
+embedding queries 2500/2500
+retrieval repetition 1/5 complete
+retrieval repetition 2/5 complete
+retrieval repetition 3/5 complete
+retrieval repetition 4/5 complete
+retrieval repetition 5/5 complete
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/inference-lab/research_lab/__main__.py", line 66, in <module>
+    main()
+  File "/workspace/inference-lab/research_lab/__main__.py", line 41, in main
+    print(render())
+          ^^^^^^^^
+  File "/workspace/inference-lab/research_lab/report.py", line 43, in render
+    raise RuntimeError("report incomplete; missing measured results: " + ", ".join(missing))
+RuntimeError: report incomplete; missing measured results: index-build.jsonl, sqlite-object-storage.json

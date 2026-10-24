@@ -1,4 +1,31 @@
-# Huerarchy: Foundation Bootstrap v0.1
+# Huerarchy
+
+Huerarchy contains a Rust shared-state foundation and an experimental platform for
+learning symbolic rules from examples.
+
+## Learning research and recorded findings
+
+The [research implementation](research/inference-lab/README.md) includes positive
+Horn closure, simulated learning worlds, online probabilistic rule learning,
+active question selection, change detection, typed concept reuse, and replayable
+experiments. It runs independently of the MCP server.
+
+- [Observations and interpretation](research/OBSERVATIONS.md): what worked, what
+  failed, and what the experiments do and do not establish.
+- [Latest study report](research/inference-lab/results/active/default/REPORT.html):
+  12,954 task runs and 2,990,592 newly acquired teaching answers, with tables and
+  standalone PNG/SVG charts. Download HTML to view it in a browser.
+- [Research setup and full evidence archive](research/ARTIFACTS.md): test commands,
+  reproducibility instructions, and the workspace archive containing all saved
+  checkpoints and compressed traces. GitHub release upload was blocked by an
+  authentication failure; the full archive is not stored in GitHub.
+
+The new learner reduced overconfidence on random outcomes but adapted less
+successfully to changing relay rules. Provisional concept reuse helped some new
+tasks; no concepts passed the validation gate. These are mixed research results,
+not a claim of general intelligence or a production learning service.
+
+## Foundation Bootstrap v0.1
 
 Huerarchy is a private, Rust-native computational substrate for autonomous AI agents.
 

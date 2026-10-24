@@ -1,0 +1,10 @@
+/target/
+/.venv/
+__pycache__/
+*.pyc
+/data/
+/models/
+
+# Full checkpoints and compressed traces are archived separately; see ../ARTIFACTS.md.
+/results/**/*.gz
+/results/**/*.sqlite*

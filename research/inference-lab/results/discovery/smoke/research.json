@@ -1,0 +1,55 @@
+{
+  "contribution": "Controlled comparison of existing ideas; no claim that the underlying algorithms are novel.",
+  "researched_on": "2026-10-24",
+  "sources": [
+    {
+      "limit": "Our bounded grammar and fresh-response gate are a separate implementation; no published performance result is transferred.",
+      "title": "Learning MDL Logic Programs from Noisy Data",
+      "url": "https://www.cs.helsinki.fi/u/mjarvisa/papers/hnjc.aaai24.pdf",
+      "use": "Noise-tolerant program search with an explicit complexity cost.",
+      "year": 2024
+    },
+    {
+      "limit": "Shared-body mining here is simpler than Stitch, and compression alone does not establish correctness or new expressive power.",
+      "title": "Top-Down Synthesis for Library Learning (Stitch)",
+      "url": "https://arxiv.org/abs/2211.16605",
+      "use": "Mine repeated symbolic structure to construct a reusable library.",
+      "year": 2023
+    },
+    {
+      "limit": "Recent box-task study; neither a reproduction nor evidence that this learner models children.",
+      "title": "Hypothesis Generation and Inductive Inference in Children and Language Models",
+      "url": "https://arxiv.org/abs/2605.24528",
+      "use": "Generate hypotheses during learning instead of only reweighting an initial set.",
+      "year": 2026
+    },
+    {
+      "limit": "Our grouped loss-window policy is inspired by the idea, not the neural LPM method or its guarantees.",
+      "title": "Beyond Noisy-TVs: Noise-Robust Exploration Via Learning Progress Monitoring",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/803b9c4a8e4784072fdd791c54d614e2-Abstract-Conference.html",
+      "use": "Compare prequential learning progress with uncertainty-seeking questions.",
+      "year": 2026
+    },
+    {
+      "limit": "These smaller worlds are custom diagnostics, not DiscoveryWorld benchmark results.",
+      "title": "DiscoveryWorld",
+      "url": "https://allenai.github.io/discoveryworld/",
+      "use": "Separate task completion from discovering explanations and executing experiments.",
+      "year": 2024
+    },
+    {
+      "limit": "Deferred: exact observed implications are not reliable causal laws under noisy feedback.",
+      "title": "Formal Concept Analysis",
+      "url": "https://iccl.inf.tu-dresden.de/web/Formale_Begriffsanalyse/en",
+      "use": "A possible future alternative proposer based on object-attribute closure.",
+      "year": null
+    },
+    {
+      "limit": "Deferred to keep pretrained knowledge outside this experiment; published poker results do not establish general concept discovery.",
+      "title": "ADVENT: LLM-Driven Automatic Predicate Invention for ILP",
+      "url": "https://arxiv.org/abs/2607.01585",
+      "use": "A future language-model proposer behind the same verification boundary.",
+      "year": 2026
+    }
+  ]
+}

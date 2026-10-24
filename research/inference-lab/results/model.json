@@ -1,0 +1,16 @@
+{
+  "bitnet_revision": "0b341e582afbf9e1011f24744b554c96a3477eb5",
+  "bytes": 367487040,
+  "dimension": 640,
+  "format": "I2_S",
+  "model": "microsoft/bitnet-embedding-270m",
+  "normalization": "L2",
+  "pooling": "last",
+  "prefixes": {
+    "document": "passage: ",
+    "query": "query: "
+  },
+  "revision": "5f1c2fd19f37ca653a3d719c8ee6cc1895f4b64f",
+  "sha256": "8ee5ae971b103cd55758934be54e5c9f7cc2b58b15890615acce8e649988c751",
+  "threads": 4
+}

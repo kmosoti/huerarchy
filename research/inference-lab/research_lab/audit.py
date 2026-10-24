@@ -1,0 +1,55 @@
+"""Claim register: source support is separate from experimental replication."""
+import csv
+from datetime import datetime, timezone
+
+from .common import ROOT, write_json
+
+CLAIMS = [
+    ("H01", "Laptop CPU/GPU inventory, driver binding, RAM channels and bandwidth", "unverified_hardware", "The cloud host cannot establish either laptop's present configuration. Collect live inventory and bandwidth measurements on each node.", "https://www.dell.com/support/manuals/en-us/g-series-15-5515-laptop/dell-g15-5515-setup-and-specifications/"),
+    ("H02", "Dell 64 GB upgrade compatibility", "conditional", "A vendor-supported capacity and a particular kit's successful training are different claims. Verify the exact BIOS, DIMMs and stability before relying on 64 GB.", "https://www.dell.com/support/manuals/en-us/g-series-15-5515-laptop/dell-g15-5515-setup-and-specifications/"),
+    ("H03", "Unbound NVIDIA GPU diagnoses nouveau or Secure Boot", "conditional", "Those are possible causes; kernel/module build failures, packaging and hardware state also require observation. No driver changes are performed here.", "https://rpmfusion.org/Howto/NVIDIA"),
+    ("H04", "6 GB + 4 GB is a unified 10 GB VRAM pool", "contradicted", "These are separate devices with partitioning, duplicated buffers and interconnect costs. Aggregate installed VRAM is not one allocation space.", "https://github.com/ggml-org/llama.cpp/blob/master/tools/rpc/README.md"),
+    ("Q01", "1.58 bits per ternary weight is actual file size", "conditional", "log2(3) is an alphabet information bound; deployed formats use packing, scales, other tensor types and metadata.", "https://github.com/ggml-org/llama.cpp/blob/master/ggml/src/ggml-common.h"),
+    ("Q02", "BitNet kernels losslessly convert ordinary FP16 LLaMA", "contradicted", "Lossless execution is relative to the native quantized model/training computation, not arbitrary FP16-to-ternary conversion.", "https://arxiv.org/html/2504.12285v2"),
+    ("Q03", "BitNet embedding accuracy is within 0.35 percent", "conditional", "The cited English MMTEB 0.6B comparison differs by 0.35 score points, against a teacher; it is not universal accuracy equivalence or an identical-weights kernel comparison.", "https://github.com/microsoft/BitNet/blob/main/docs/bitnet-embeddings-i2s-guide.md"),
+    ("Q04", "TQ1_0 and TQ2_0 block costs", "supported_layout", "Upstream structs give 54 and 66 bytes per 256 weights: 1.6875 and 2.0625 bits/weight. The upstream Q2_0 group-64 block is 18 bytes: 2.25 bits/weight.", "https://github.com/ggml-org/llama.cpp/blob/master/ggml/src/ggml-common.h"),
+    ("Q05", "Block scales necessarily make every ternary export lossy", "conditional", "Exactness depends on original scales, representability and converter behavior. Test decoded weights and arithmetic against a specified reference.", "https://github.com/microsoft/BitNet/blob/main/docs/bitnet-embeddings-i2s-guide.md"),
+    ("Q06", "TQ2_0 is always five times faster than TQ1_0", "unverified_generalization", "The supplied timing lacks enough workload, implementation and hardware detail for replication. Packing ratios do not determine runtime.", "https://github.com/ggml-org/llama.cpp/blob/master/ggml/src/ggml-common.h"),
+    ("Q07", "TL2 is exact FP16, supports all shapes, and always beats I2_S", "conditional", "Kernel support is model-, shape-, ISA- and revision-dependent; compare against the ternary reference. This pilot uses the embedding model's supported I2_S path.", "https://github.com/microsoft/BitNet"),
+    ("M01", "MoTE yields +4.3 points at 3.4 GB expert memory", "supported_paper_specific", "Reported for the paper's multimodal, iso-memory comparison with post-training quantization. It is not a universal accuracy/throughput theorem.", "https://arxiv.org/html/2506.14435v2"),
+    ("M02", "Maple is a top-1 MoE", "contradicted", "The published Maple-Preview configuration has 256 experts, eight active, and 24 layers. Apple Silicon speeds use a different runtime.", "https://huggingface.co/deepgrove/maple-preview"),
+    ("M03", "Ternary Bonsai-27B is sparse and fits fully in 6 GB", "contradicted", "It preserves a dense Qwen3.6-27B architecture; the deployed GGUF is approximately 7.2 GB before runtime state. 5.9 GB is an ideal representation figure.", "https://huggingface.co/prism-ml/Ternary-Bonsai-27B-gguf"),
+    ("M04", "An expert pool must always fit wholly in RAM", "conditional", "Whole-pool residency is a useful baseline; offloading/prefetch schemes can operate otherwise, with routing locality and I/O costs that require measurement.", "https://arxiv.org/html/2506.14435v2"),
+    ("T01", "750 MB describes total LoRA training VRAM for 2.7B", "unverified_generalization", "Packed weight size excludes activations, adapters, optimizer state and runtime buffers; the supplied number does not establish total training residency.", "https://docs.pytorch.org/docs/stable/generated/torch.optim.AdamW.html"),
+    ("T02", "Eight-expert 3B MoTE full AdamW fits in 32 GB", "unverified_budget", "Budget trainable master weights, gradients, optimizer moments and activations separately from deployed ternary weights before attempting this experiment.", "https://arxiv.org/html/2506.14435v2"),
+    ("S01", "DDR bandwidth predicts CPU-to-GPU expert transfer", "contradicted", "DDR, PCIe and LAN are different paths. Residency, batching, overlap, synchronization and routing affect the roofline.", "https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/"),
+    ("S02", "Layer split guarantees 20+ tokens/sec over laptop LAN", "unverified_prediction", "A layer partition does not itself establish pipelined overlap or faster single-stream decode. Benchmark capacity and throughput separately.", "https://github.com/ggml-org/llama.cpp/blob/master/tools/rpc/README.md"),
+    ("C01", "Free-threading was introduced in Python 3.15", "contradicted", "Optional free-threaded CPython began in 3.13; extensions may re-enable the GIL. Internal locking and workload limits still apply.", "https://docs.python.org/3.15/howto/free-threading-python.html"),
+    ("C02", "The PyO3 feature is abi3-py315t", "contradicted", "PyO3 0.30.1 exposes abi3t and abi3t-py315. The declaration gil_used=false does not prove no locks, zero-copy access or linear scaling.", "https://pyo3.rs/v0.30.1/features.html"),
+    ("C03", "Rust 1.100 is required/current stable", "contradicted_at_audit_date", "The inspected stable channel and installed compiler are 1.99.1; this pilot does not need 1.100.", "https://static.rust-lang.org/dist/channel-rust-stable.toml"),
+    ("C04", "tritium-format is a stable dependency", "conditional", "The inspected registry lists 1.1.0-rc.2 and rc.0, with no stable release. It exists; it is not required for this pilot.", "https://crates.io/api/v1/crates/tritium-format"),
+    ("I01", "Human 10 bits/s and speech 39 bits/s are total brain throughput", "contradicted_interpretation", "The behavioral perspective and language-encoding study concern different measurements, not a universal neural-computation bandwidth.", "https://www.cell.com/neuron/fulltext/S0896-6273(24)00808-0"),
+    ("I02", "Speech information rate around 39 bits/s", "supported_study_specific", "The cross-language study concerns estimated speech encoding rates; it does not measure source-byte compression or machine task efficiency.", "https://www.science.org/doi/10.1126/sciadv.aaw2594"),
+    ("I03", "Synaptic measurements imply a whole-brain SSD capacity", "contradicted_interpretation", "The 4.1-4.59 bit result concerns distinguishable synaptic strengths in the study; it does not establish usable conceptual memory capacity.", "https://direct.mit.edu/neco/article/36/5/781/120323/Synaptic-Information-Storage-Capacity-Measured"),
+    ("I04", "Embedding dimension measures task mutual information", "contradicted", "Array size determines payload bytes, not I(Z;Y). Measure task-defined recall, correctness, latency and complete system costs.", "https://arxiv.org/abs/2302.13560"),
+    ("I05", "Shared context compresses communication for free", "contradicted", "Count model/schema/dictionary bootstrap, synchronization, fallback and amortization. Decoder dependencies are part of the system.", "https://arxiv.org/abs/2302.13560"),
+    ("I06", "A 2025 HDC review establishes general superiority", "conditional", "The review studies classification with particular encodings/baselines, not general exact relational reasoning. VSA remains a later ablation.", "https://link.springer.com/article/10.1007/s10462-025-11181-2"),
+    ("L01", "Finite positive Horn closure satisfies closure axioms", "mathematical_and_tested", "Extensivity, monotonicity and idempotence follow from finite positive Horn semantics; generated tests also check implementation/reference agreement.", "https://msp.org/pjm/1955/5-2/pjm-v5-n2-p11-s.pdf"),
+    ("L02", "A Rust closure iterator is lazy from input to output", "conditional", "The supplied algorithm eagerly consumes seeds and builds the dependency index; rule propagation advances on next().", "https://doc.rust-lang.org/std/iter/fn.from_fn.html"),
+    ("L03", "Closure contributes independent observations", "contradicted", "Given seeds and rules it computes deterministic consequences. Preserve provenance and distinguish observation, derivation and approximate retrieval.", "https://msp.org/pjm/1955/5-2/pjm-v5-n2-p11-s.pdf"),
+]
+
+
+def write_audit():
+    directory = ROOT / "evidence"
+    directory.mkdir(exist_ok=True)
+    with (directory / "claim-audit.csv").open("w", newline="") as stream:
+        writer = csv.writer(stream)
+        writer.writerow(("id", "claim", "status", "finding", "source"))
+        writer.writerows(CLAIMS)
+    write_json(directory / "audit-metadata.json", {
+        "audit_date_utc": datetime.now(timezone.utc).isoformat(), "claims": len(CLAIMS),
+        "method": "Primary research, official documentation, registry/channel metadata and observed runtime; paper results are not marked replicated",
+        "hardware_status": "Razer and Dell were not accessed or modified",
+        "replication_status": "See results for the experiments actually executed"})
+    print(f"wrote {len(CLAIMS)} evidence-backed claim assessments")

@@ -1,0 +1,19 @@
+{
+  "note": "dbstat allocated pages by object on rebuilt copy; excludes external event fixture and model artifacts",
+  "objects_bytes": {
+    "edges": 118784,
+    "events": 21839872,
+    "events_node": 1445888,
+    "nodes": 770048,
+    "nodes_group": 57344,
+    "snapshots": 5742592,
+    "sqlite_schema": 4096,
+    "sqlite_stat1": 4096,
+    "summaries_config": 4096,
+    "summaries_content": 684032,
+    "summaries_data": 344064,
+    "summaries_docsize": 49152,
+    "summaries_idx": 4096
+  },
+  "source_db_bytes": 31068160
+}

@@ -1,0 +1,10 @@
+native search fp32 repetition 1/5: 2.929s, peak RSS 19.48 MiB
+native search int8 repetition 1/5: 0.931s, peak RSS 10.30 MiB
+native search int8 repetition 2/5: 0.860s, peak RSS 10.32 MiB
+native search fp32 repetition 2/5: 1.608s, peak RSS 19.47 MiB
+native search fp32 repetition 3/5: 1.570s, peak RSS 19.48 MiB
+native search int8 repetition 3/5: 0.870s, peak RSS 10.31 MiB
+native search int8 repetition 4/5: 0.951s, peak RSS 10.32 MiB
+native search fp32 repetition 4/5: 2.016s, peak RSS 19.48 MiB
+native search fp32 repetition 5/5: 2.348s, peak RSS 19.48 MiB
+native search int8 repetition 5/5: 0.875s, peak RSS 10.32 MiB

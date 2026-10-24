@@ -1,0 +1,15 @@
+{
+  "seed": 42,
+  "events": 100000,
+  "nodes": 5000,
+  "queries": 10000,
+  "epochs": 100,
+  "events_per_epoch": 1000,
+  "query_templates_held_out_from_documents": true,
+  "source_sha256": "5394d87e901307f876f9d5fd12bc221e4431277572eb56ee237c4574dba48d76",
+  "documents_sha256": "ce24579249b49e4c10ba6a0a3d2fc01a51ac86641c93c86be278e4d2256e9b30",
+  "queries_sha256": "3dcbc86cc04c0abf8856868298723290b43e670fd108be35d4e8bbb2afe79b28",
+  "snapshot_sha256": "a7df99a57ff4216c999b7a72e1afb7903a47150ca7869ea0d0f4cf9867c058ed",
+  "context_hash": "75f641f870c5bf07581ad0e478dabbdd5d1abc7a2676159661dc58638ac7f63d",
+  "source_provenance_retained": true
+}

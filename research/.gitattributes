@@ -1,0 +1,4 @@
+# Keep measured inputs and evidence byte-identical to their SHA-256 manifests.
+inference-lab/** -text
+inference-lab/results/** -whitespace linguist-generated=true
+inference-lab/evidence/*.csv whitespace=cr-at-eol

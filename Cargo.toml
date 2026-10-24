@@ -3,6 +3,7 @@ members = [
     "crates/huerarchy-core",
     "crates/huerarchy-server",
 ]
+exclude = ["research/inference-lab"]
 resolver = "3"
 
 [workspace.package]
