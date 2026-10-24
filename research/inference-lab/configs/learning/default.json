@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "fixture_seed": 42,
+  "dimensions": 6,
+  "stable_worlds": 6,
+  "changing_worlds": 6,
+  "diagnostic": true,
+  "steps": 240,
+  "changes": [
+    80,
+    160
+  ],
+  "noise_rates": [
+    0.0,
+    0.1,
+    0.2
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "assumed_noise": 0.1,
+  "window": 32,
+  "exploration": 0.1,
+  "components": {
+    "teacher": "noisy-world",
+    "memory": "sqlite",
+    "detector": "page-hinkley",
+    "evaluator": "heldout-classification",
+    "reasoners": [
+      "direct",
+      "rust-horn"
+    ]
+  },
+  "detector": {
+    "minimum": 20,
+    "tolerance": 0.05,
+    "threshold": 5.0
+  },
+  "variants": [
+    {
+      "learner": "full-history",
+      "policy": "random"
+    },
+    {
+      "learner": "full-history",
+      "policy": "information-gain"
+    },
+    {
+      "learner": "window",
+      "policy": "random"
+    },
+    {
+      "learner": "window",
+      "policy": "information-gain"
+    },
+    {
+      "learner": "drift-reset",
+      "policy": "random"
+    },
+    {
+      "learner": "drift-reset",
+      "policy": "information-gain"
+    },
+    {
+      "learner": "frozen",
+      "policy": "random"
+    },
+    {
+      "learner": "memory",
+      "policy": "random"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+suite,variant,metric,value
+closure,chain,naive_ns,70059704
+closure,chain,delta_ns,500105
+closure,chain,worklist_ns,310889
+closure,chain,reused_index_ns,124110
+closure,chain,proof_ns,399177
+closure,chain,speedup_vs_naive,225.35279151079646
+closure,chain,worklist_allocations,2072
+closure,chain,worklist_peak_requested_heap_bytes,260128
+closure,chain,worklist_yielded_facts_per_second,6590776.772417164
+closure,fanout,naive_ns,977801
+closure,fanout,delta_ns,1340305
+closure,fanout,worklist_ns,670558
+closure,fanout,reused_index_ns,459389
+closure,fanout,proof_ns,1196255
+closure,fanout,speedup_vs_naive,1.4581900447090335
+closure,fanout,worklist_allocations,41
+closure,fanout,worklist_peak_requested_heap_bytes,366900
+closure,fanout,worklist_yielded_facts_per_second,14914444.388106622
+closure,conjunction_cycle,naive_ns,327239953
+closure,conjunction_cycle,delta_ns,1025150
+closure,conjunction_cycle,worklist_ns,482474
+closure,conjunction_cycle,reused_index_ns,179059
+closure,conjunction_cycle,proof_ns,613897
+closure,conjunction_cycle,speedup_vs_naive,678.2540675766984
+closure,conjunction_cycle,worklist_allocations,3026
+closure,conjunction_cycle,worklist_peak_requested_heap_bytes,286024
+closure,conjunction_cycle,worklist_yielded_facts_per_second,6222096.942011383
+closure,mostly_blocked,naive_ns,14943065
+closure,mostly_blocked,delta_ns,9386830
+closure,mostly_blocked,worklist_ns,7829821
+closure,mostly_blocked,reused_index_ns,18977
+closure,mostly_blocked,proof_ns,8005868
+closure,mostly_blocked,speedup_vs_naive,1.908481049566778
+closure,mostly_blocked,worklist_allocations,40052
+closure,mostly_blocked,worklist_peak_requested_heap_bytes,4161568
+closure,mostly_blocked,worklist_yielded_facts_per_second,3959.2220562896646
+retrieval,fts5,recall_at_10,0.5788
+retrieval,fts5,ndcg_at_10,0.33006986292200746
+retrieval,fp32,recall_at_10,0.4265
+retrieval,fp32,ndcg_at_10,0.26334482013092403
+retrieval,int8_storage,recall_at_10,0.4243333333333334
+retrieval,int8_storage,ndcg_at_10,0.2631559037745683
+retrieval,fts5_plus_vectors,recall_at_10,0.8122
+retrieval,fts5_plus_vectors,ndcg_at_10,0.7023987781087413
+communication,json_full / raw,total_bytes,4824054
+communication,json_full / raw,bootstrap_bytes,414964
+communication,json_full / raw,codec_apply_check_p50_ms,7.2785245
+communication,json_full / zstd-3,total_bytes,791036
+communication,json_full / zstd-3,bootstrap_bytes,33124
+communication,json_full / zstd-3,codec_apply_check_p50_ms,7.482268
+communication,cbor_full / raw,total_bytes,2266131
+communication,cbor_full / raw,bootstrap_bytes,275455
+communication,cbor_full / raw,codec_apply_check_p50_ms,8.6126885
+communication,cbor_full / zstd-3,total_bytes,1366578
+communication,cbor_full / zstd-3,bootstrap_bytes,51284
+communication,cbor_full / zstd-3,codec_apply_check_p50_ms,8.7082945
+communication,cbor_delta / raw,total_bytes,545120
+communication,cbor_delta / raw,bootstrap_bytes,275455
+communication,cbor_delta / raw,codec_apply_check_p50_ms,7.268784
+communication,cbor_delta / zstd-3,total_bytes,190731
+communication,cbor_delta / zstd-3,bootstrap_bytes,51284
+communication,cbor_delta / zstd-3,codec_apply_check_p50_ms,7.3648275
+index_build,secondary_indexes,elapsed_ns,43001839
+index_build,secondary_indexes,cpu_seconds,0.04299354799999999
+index_build,fts5,elapsed_ns,10878625
+index_build,fts5,cpu_seconds,0.010882508999999985
+instruction_set,native,texts,128
+instruction_set,native,median_elapsed_ns,8436190541
+instruction_set,native,texts_per_second,15.172725103578241
+instruction_set,native,peak_rss_bytes,521269248
+instruction_set,avx2,texts,128
+instruction_set,avx2,median_elapsed_ns,11609739462
+instruction_set,avx2,texts_per_second,11.02522588202419
+instruction_set,avx2,peak_rss_bytes,521560064
+initial_encoding,corpus,texts,5000
+initial_encoding,corpus,request_seconds,607.001897529
+initial_encoding,corpus,server_cpu_seconds,2264.54
+initial_encoding,queries,texts,2500
+initial_encoding,queries,request_seconds,171.158678337
+initial_encoding,queries,server_cpu_seconds,631.8899999999999
+vector_kernels,fp32,median_total_search_ns,2015627017
+vector_kernels,fp32,min_total_search_ns,1569908021
+vector_kernels,fp32,max_total_search_ns,2928992732
+vector_kernels,fp32,query_loop_cpu_ns,2092066413
+vector_kernels,fp32,repetitions,5
+vector_kernels,fp32,search_p50_ns,598701.5
+vector_kernels,fp32,search_p95_ns,2492260.6499999985
+vector_kernels,fp32,corpus_bytes,12820000
+vector_kernels,fp32,loaded_rss_bytes,20422656
+vector_kernels,fp32,peak_rss_bytes,20426752
+vector_kernels,fp32,recall_at_10,0.4265
+vector_kernels,fp32,ndcg_at_10,0.26334482013092403
+vector_kernels,fp32,hybrid_recall_at_10,0.8122
+vector_kernels,fp32,hybrid_ndcg_at_10,0.7023987781087413
+vector_kernels,fp32,max_abs_score_error,2.1293516905274146e-07
+vector_kernels,int8,median_total_search_ns,875267902
+vector_kernels,int8,min_total_search_ns,860397948
+vector_kernels,int8,max_total_search_ns,950752261
+vector_kernels,int8,query_loop_cpu_ns,912017978
+vector_kernels,int8,repetitions,5
+vector_kernels,int8,search_p50_ns,314722.5
+vector_kernels,int8,search_p95_ns,454531.5999999997
+vector_kernels,int8,corpus_bytes,3220000
+vector_kernels,int8,loaded_rss_bytes,10821632
+vector_kernels,int8,peak_rss_bytes,10821632
+vector_kernels,int8,recall_at_10,0.4243333333333334
+vector_kernels,int8,ndcg_at_10,0.2631559037745683
+vector_kernels,int8,hybrid_recall_at_10,0.8142
+vector_kernels,int8,hybrid_ndcg_at_10,0.7038561493723672
+vector_kernels,int8,max_abs_score_error,1.8042189420253152e-07

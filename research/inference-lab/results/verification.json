@@ -1,0 +1,6 @@
+{
+  "all_correct": true,
+  "events_replayed_and_verified": 100000,
+  "exact_queries_per_repetition": 7500,
+  "repetitions": 5
+}

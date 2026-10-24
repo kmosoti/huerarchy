@@ -1,0 +1,26 @@
+{
+  "figures": {
+    "curve-mechanism-changing.png": "2f2159102d7e2a1f21c6c9710ccd5c81b6e9d21b0737a2bb38c1a57bbba16680",
+    "curve-mechanism-changing.svg": "75e653f73f8669166a95a79b80ec75876eb061e8cba579b710eda11866660d6f",
+    "curve-mechanism-stable.png": "0b6b84d381c887f9efa55633a5c468b4f6544eb22f4059103b2eb767a2448d7c",
+    "curve-mechanism-stable.svg": "480682848ed9a25ca791e15724d85788234eb3ad29932aac13171c6e2f174782",
+    "curve-pair-changing.png": "0102b9b2dd92da07a213b209897c55e0a74f9fe657869e0aecc3a8bd7f59da7f",
+    "curve-pair-changing.svg": "504a6edabdcf6b3f86a3522ce88b90e0f965a16290aaf63b3e0fb42b23879827",
+    "curve-pair-stable.png": "478c4df3d521f63a2ca395a6df3b4f1660433a077b9565558a518c4053889443",
+    "curve-pair-stable.svg": "a67b348be1606873cbeaf33ac1132314da3718d358177a5528afdec0ffe1c2b7",
+    "curve-relay-changing.png": "d0af63b45fb28a71082099ebb9435266f4e575496da161c73b7088c2a8fcfd64",
+    "curve-relay-changing.svg": "05b5ccd0634344d6a4e87472a439543f2e20dcaba3cfa2aa3adb7eceb9f45351",
+    "curve-relay-stable.png": "67cea8b36ed96f071fd34eb0b353687b8e1aeab8ea58480ef460cf7d67824fad",
+    "curve-relay-stable.svg": "27a24129700bd92ce41adf0597b32abbd2c2f2621455b2339887382396cfe7ea",
+    "paired-comparisons.png": "06023f42793970a8cb850f247cafcee6e52ce04a835c9193e5483bd623f26422",
+    "paired-comparisons.svg": "e6c88e4633ed403be566236b2b52d34386b3b427b6f3fd0cd28388b76648a17b"
+  },
+  "inputs": {
+    "runs.jsonl": "999acf48db88e837432056e895010db0ab58c1451f736ba260369559d69ae5e2",
+    "summary.json": "cc2260af55253e719f99bb10cf253bf0ba8a624b262106729a827715d9c7025a",
+    "trace.jsonl.gz": "88b28d4e6a9faefdbb1049623b26839eb42051b3ac91f28f2a84db6b1aa80cb3"
+  },
+  "matplotlib": "3.10.7",
+  "requirements_sha256": "46794eb9d4dfbf1115bd2fbd265f4ce93c3aa8ece8fbc4e79e2c99cce1aedbbc",
+  "script_sha256": "b0111d5df5af0626c6fbb4b862e259206256004c15d9a2726cd1e97d71e72f51"
+}

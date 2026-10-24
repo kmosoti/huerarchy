@@ -1,0 +1,10 @@
+{
+  "fp32_vector_bytes": 12800000,
+  "int8_search_decoded_bytes": 12800000,
+  "int8_vector_bytes": 3220000,
+  "minimum_cosine_fp32_vs_int8": 0.999927282333374,
+  "model_bytes": 367487040,
+  "native_server_peak_rss_bytes": 565501952,
+  "native_server_startup_seconds": 1.527746302000196,
+  "note": "INT8 is a storage experiment; NumPy search decodes to FP32 and is not a native INT8 kernel"
+}

@@ -1,0 +1,6 @@
+{
+  "max_abs_coordinate_difference": 0.0044698286801576614,
+  "mean_cosine": 0.9996707439422607,
+  "minimum_cosine": 0.9995282292366028,
+  "note": "Same cloud CPU and four threads; AVX2-constrained build is not a laptop performance prediction"
+}

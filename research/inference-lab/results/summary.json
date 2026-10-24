@@ -1,0 +1,350 @@
+{
+  "all_exact_checks_pass": true,
+  "closure": {
+    "chain": {
+      "delta_ns": 500105,
+      "naive_ns": 70059704,
+      "proof_ns": 399177,
+      "reused_index_ns": 124110,
+      "speedup_vs_naive": 225.35279151079646,
+      "worklist_allocations": 2072,
+      "worklist_ns": 310889,
+      "worklist_peak_requested_heap_bytes": 260128,
+      "worklist_yielded_facts_per_second": 6590776.772417164
+    },
+    "conjunction_cycle": {
+      "delta_ns": 1025150,
+      "naive_ns": 327239953,
+      "proof_ns": 613897,
+      "reused_index_ns": 179059,
+      "speedup_vs_naive": 678.2540675766984,
+      "worklist_allocations": 3026,
+      "worklist_ns": 482474,
+      "worklist_peak_requested_heap_bytes": 286024,
+      "worklist_yielded_facts_per_second": 6222096.942011383
+    },
+    "fanout": {
+      "delta_ns": 1340305,
+      "naive_ns": 977801,
+      "proof_ns": 1196255,
+      "reused_index_ns": 459389,
+      "speedup_vs_naive": 1.4581900447090335,
+      "worklist_allocations": 41,
+      "worklist_ns": 670558,
+      "worklist_peak_requested_heap_bytes": 366900,
+      "worklist_yielded_facts_per_second": 14914444.388106622
+    },
+    "mostly_blocked": {
+      "delta_ns": 9386830,
+      "naive_ns": 14943065,
+      "proof_ns": 8005868,
+      "reused_index_ns": 18977,
+      "speedup_vs_naive": 1.908481049566778,
+      "worklist_allocations": 40052,
+      "worklist_ns": 7829821,
+      "worklist_peak_requested_heap_bytes": 4161568,
+      "worklist_yielded_facts_per_second": 3959.2220562896646
+    }
+  },
+  "communication": {
+    "cbor_delta / raw": {
+      "bootstrap_bytes": 275455,
+      "codec_apply_check_p50_ms": 7.268784,
+      "total_bytes": 545120
+    },
+    "cbor_delta / zstd-3": {
+      "bootstrap_bytes": 51284,
+      "codec_apply_check_p50_ms": 7.3648275,
+      "total_bytes": 190731
+    },
+    "cbor_full / raw": {
+      "bootstrap_bytes": 275455,
+      "codec_apply_check_p50_ms": 8.6126885,
+      "total_bytes": 2266131
+    },
+    "cbor_full / zstd-3": {
+      "bootstrap_bytes": 51284,
+      "codec_apply_check_p50_ms": 8.7082945,
+      "total_bytes": 1366578
+    },
+    "json_full / raw": {
+      "bootstrap_bytes": 414964,
+      "codec_apply_check_p50_ms": 7.2785245,
+      "total_bytes": 4824054
+    },
+    "json_full / zstd-3": {
+      "bootstrap_bytes": 33124,
+      "codec_apply_check_p50_ms": 7.482268,
+      "total_bytes": 791036
+    }
+  },
+  "communication_states_verified": 12000,
+  "energy_joules": null,
+  "energy_reason": "No exposed RAPL/powercap energy sensor; CPU time is not energy",
+  "environment": {
+    "bitnet_llama_revision": "390c307752ab78fd8189f359d6954c9ba1be74af",
+    "bitnet_revision": "0b341e582afbf9e1011f24744b554c96a3477eb5",
+    "cpu_flags": [
+      "fpu",
+      "vme",
+      "de",
+      "pse",
+      "tsc",
+      "msr",
+      "pae",
+      "mce",
+      "cx8",
+      "apic",
+      "sep",
+      "mtrr",
+      "pge",
+      "mca",
+      "cmov",
+      "pat",
+      "pse36",
+      "clflush",
+      "mmx",
+      "fxsr",
+      "sse",
+      "sse2",
+      "ss",
+      "ht",
+      "syscall",
+      "nx",
+      "pdpe1gb",
+      "rdtscp",
+      "lm",
+      "constant_tsc",
+      "rep_good",
+      "nopl",
+      "xtopology",
+      "nonstop_tsc",
+      "cpuid",
+      "tsc_known_freq",
+      "pni",
+      "pclmulqdq",
+      "ssse3",
+      "fma",
+      "cx16",
+      "pcid",
+      "sse4_1",
+      "sse4_2",
+      "x2apic",
+      "movbe",
+      "popcnt",
+      "tsc_deadline_timer",
+      "aes",
+      "xsave",
+      "avx",
+      "f16c",
+      "rdrand",
+      "hypervisor",
+      "lahf_lm",
+      "abm",
+      "3dnowprefetch",
+      "cpuid_fault",
+      "fsgsbase",
+      "tsc_adjust",
+      "bmi1",
+      "hle",
+      "avx2",
+      "smep",
+      "bmi2",
+      "erms",
+      "invpcid",
+      "rtm",
+      "avx512f",
+      "avx512dq",
+      "rdseed",
+      "adx",
+      "smap",
+      "avx512ifma",
+      "clflushopt",
+      "clwb",
+      "avx512cd",
+      "sha_ni",
+      "avx512bw",
+      "avx512vl",
+      "xsaveopt",
+      "xsavec",
+      "xgetbv1",
+      "xsaves",
+      "avx_vnni",
+      "avx512_bf16",
+      "arat",
+      "avx512vbmi",
+      "umip",
+      "waitpkg",
+      "avx512_vbmi2",
+      "gfni",
+      "vaes",
+      "vpclmulqdq",
+      "avx512_vnni",
+      "avx512_bitalg",
+      "avx512_vpopcntdq",
+      "rdpid",
+      "cldemote",
+      "movdiri",
+      "movdir64b",
+      "fsrm",
+      "serialize",
+      "tsxldtrk",
+      "avx512_fp16",
+      "arch_capabilities"
+    ],
+    "cpu_max": "400000 100000",
+    "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "disk_free_bytes": 28645060608,
+    "energy_joules": null,
+    "energy_reason": "No exposed RAPL/powercap energy sensor; CPU time is not energy",
+    "fts5": true,
+    "gil_enabled": null,
+    "gil_note": "API absent on Python 3.12; this is the conventional build",
+    "gpu_devices": [],
+    "memory_max": "17179869184",
+    "model_revision": "5f1c2fd19f37ca653a3d719c8ee6cc1895f4b64f",
+    "packages": {
+      "cbor2": "6.1.5",
+      "cmake": "4.4.4",
+      "ninja": "1.13.2",
+      "numpy": "2.5.4",
+      "zstandard": "0.25.0"
+    },
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "python_executable": "/workspace/inference-lab/.venv/bin/python",
+    "rust": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+    "sqlite": "3.53.1",
+    "timestamp_utc": "2026-10-24T00:23:29.588362+00:00",
+    "visible_cpus": 5
+  },
+  "fixture": {
+    "context_hash": "75f641f870c5bf07581ad0e478dabbdd5d1abc7a2676159661dc58638ac7f63d",
+    "documents_sha256": "ce24579249b49e4c10ba6a0a3d2fc01a51ac86641c93c86be278e4d2256e9b30",
+    "epochs": 100,
+    "events": 100000,
+    "events_per_epoch": 1000,
+    "nodes": 5000,
+    "queries": 10000,
+    "queries_sha256": "3dcbc86cc04c0abf8856868298723290b43e670fd108be35d4e8bbb2afe79b28",
+    "query_templates_held_out_from_documents": true,
+    "seed": 42,
+    "snapshot_sha256": "a7df99a57ff4216c999b7a72e1afb7903a47150ca7869ea0d0f4cf9867c058ed",
+    "snapshot_sources_sha256": "27feb303fe1496421b2fdef4e8bc6417e1b4cc779e7d326ad05ab209847e104e",
+    "source_provenance_retained": true,
+    "source_sha256": "5394d87e901307f876f9d5fd12bc221e4431277572eb56ee237c4574dba48d76"
+  },
+  "index_build": {
+    "fts5": {
+      "cpu_seconds": 0.010882508999999985,
+      "elapsed_ns": 10878625
+    },
+    "secondary_indexes": {
+      "cpu_seconds": 0.04299354799999999,
+      "elapsed_ns": 43001839
+    }
+  },
+  "initial_encoding": {
+    "corpus": {
+      "request_seconds": 607.001897529,
+      "server_cpu_seconds": 2264.54,
+      "texts": 5000
+    },
+    "queries": {
+      "request_seconds": 171.158678337,
+      "server_cpu_seconds": 631.8899999999999,
+      "texts": 2500
+    }
+  },
+  "instruction_set": {
+    "avx2": {
+      "median_elapsed_ns": 11609739462,
+      "peak_rss_bytes": 521560064,
+      "texts": 128,
+      "texts_per_second": 11.02522588202419
+    },
+    "native": {
+      "median_elapsed_ns": 8436190541,
+      "peak_rss_bytes": 521269248,
+      "texts": 128,
+      "texts_per_second": 15.172725103578241
+    }
+  },
+  "instruction_set_equivalence": {
+    "max_abs_coordinate_difference": 0.0044698286801576614,
+    "mean_cosine": 0.9996707439422607,
+    "minimum_cosine": 0.9995282292366028,
+    "note": "Same cloud CPU and four threads; AVX2-constrained build is not a laptop performance prediction"
+  },
+  "proofs_verified": 4864500,
+  "retrieval": {
+    "fp32": {
+      "ndcg_at_10": 0.26334482013092403,
+      "recall_at_10": 0.4265
+    },
+    "fts5": {
+      "ndcg_at_10": 0.33006986292200746,
+      "recall_at_10": 0.5788
+    },
+    "fts5_plus_vectors": {
+      "ndcg_at_10": 0.7023987781087413,
+      "recall_at_10": 0.8122
+    },
+    "int8_storage": {
+      "ndcg_at_10": 0.2631559037745683,
+      "recall_at_10": 0.4243333333333334
+    }
+  },
+  "storage": {
+    "fp32_vector_bytes": 12800000,
+    "int8_search_decoded_bytes": 12800000,
+    "int8_vector_bytes": 3220000,
+    "minimum_cosine_fp32_vs_int8": 0.999927282333374,
+    "model_bytes": 367487040,
+    "native_server_peak_rss_bytes": 565501952,
+    "native_server_startup_seconds": 1.527746302000196,
+    "note": "INT8 is a storage experiment; NumPy search decodes to FP32 and is not a native INT8 kernel"
+  },
+  "vector_kernels": {
+    "fp32": {
+      "corpus_bytes": 12820000,
+      "hybrid_ndcg_at_10": 0.7023987781087413,
+      "hybrid_recall_at_10": 0.8122,
+      "loaded_rss_bytes": 20422656,
+      "max_abs_score_error": 2.1293516905274146e-07,
+      "max_total_search_ns": 2928992732,
+      "median_total_search_ns": 2015627017,
+      "min_total_search_ns": 1569908021,
+      "ndcg_at_10": 0.26334482013092403,
+      "peak_rss_bytes": 20426752,
+      "query_loop_cpu_ns": 2092066413,
+      "recall_at_10": 0.4265,
+      "repetitions": 5,
+      "search_p50_ns": 598701.5,
+      "search_p95_ns": 2492260.6499999985
+    },
+    "int8": {
+      "corpus_bytes": 3220000,
+      "hybrid_ndcg_at_10": 0.7038561493723672,
+      "hybrid_recall_at_10": 0.8142,
+      "loaded_rss_bytes": 10821632,
+      "max_abs_score_error": 1.8042189420253152e-07,
+      "max_total_search_ns": 950752261,
+      "median_total_search_ns": 875267902,
+      "min_total_search_ns": 860397948,
+      "ndcg_at_10": 0.2631559037745683,
+      "peak_rss_bytes": 10821632,
+      "query_loop_cpu_ns": 912017978,
+      "recall_at_10": 0.4243333333333334,
+      "repetitions": 5,
+      "search_p50_ns": 314722.5,
+      "search_p95_ns": 454531.5999999997
+    }
+  },
+  "verification": {
+    "all_correct": true,
+    "events_replayed_and_verified": 100000,
+    "exact_queries_per_repetition": 7500,
+    "repetitions": 5
+  }
+}

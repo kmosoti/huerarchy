@@ -1,0 +1,10 @@
+/target/
+/.venv/
+__pycache__/
+*.pyc
+/data/
+/models/
+
+# Full checkpoints and compressed traces are stored as research release assets.
+/results/**/*.gz
+/results/**/*.sqlite*

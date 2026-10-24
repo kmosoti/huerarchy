@@ -1,0 +1,43 @@
+{
+  "components": "built-in-registry-v1",
+  "config_sha256": "340301a8e038709cad426f934580b7be29d52bc202c8d77c4979067f6a4f9e31",
+  "cpu_seconds": 111.569785362,
+  "elapsed_seconds": 114.44773737099968,
+  "energy_joules": null,
+  "energy_note": "No exposed energy sensor; CPU time is not energy",
+  "outputs": {
+    "REPORT.html": "dcc34632d3ab0927843a175084c701a87cab65f5bc4abce62241dbb5a4ffb2c3",
+    "config.json": "8592d6c2ec661e87c0efae7de88cfd9f13b423b18352e36ba9a6e937fbf6f614",
+    "environment.json": "79aabd2817e087b78b6825ffd5bd2bb60872df0c6520dad68ccf98d1bab1f068",
+    "explanations.jsonl": "a3a93ea238ff581ba133abac2b0fd1f0e8bc107141ff0650eeb6290ce8221ca0",
+    "memory.sqlite": "91b6131964c110f36b7651299850461c862df06e2612879ab75f932d036658d3",
+    "runs.jsonl": "26e464728d3e71f301eef69303594078223200c7dd9653f5eafc7b5fe590dbfc",
+    "summary.csv": "16f964754657ef4fce77f48a1c0f9498638f736be22525be956bd8db630f50d6",
+    "summary.json": "73e82bfb87eccb3f4e3ed48b200087e0649c06e897f4be079128b0b20577f2d7",
+    "trace.jsonl.gz": "51043ae8554089e3178f62babfff29d7e42bd7a99201b921b54e9f0c7d19cb41",
+    "worlds.json": "1fd2991fdca1059c64c72931bbfd7a51fbe15608dd9d1852a64e13e2bec4df3f"
+  },
+  "peak_rss_bytes": 42307584,
+  "proof_checks": 12,
+  "render_sources": {
+    "research_lab/learning/report.py": "3b80717e4fe2b6132cb51e5d4fb06962077074865c8056aeba45dfe1d38aad01"
+  },
+  "runs": 1560,
+  "rust_reasoner_sha256": "3047c2396eaa2014ef21f0d453ca8e600c11baf7ae7fd387592457aef5c89dfd",
+  "schema": 1,
+  "sources": {
+    "research_lab/__main__.py": "ef15aa997d5e33a08f534b43946b574311bd50561c3b0393b08c2407e56ad0c7",
+    "research_lab/common.py": "bc81c1be9ea21159d3e77441bb178325a28d6b2e8962217ae66059e02cedb4ec",
+    "research_lab/learning/__init__.py": "d2828ff304ef82cf86155f7a4ad052dd822f92daace0e93b10c1ef59ca6aff6e",
+    "research_lab/learning/cli.py": "4536ad5f4969408831946a7f5b124db8dacc981835d6ad2720e21245a2bf7215",
+    "research_lab/learning/components.py": "827bd8db738c5207f65ad4946121e3a6f39606132fd483bc1251aa232dba6a95",
+    "research_lab/learning/evaluation.py": "cab1aaf9c07024b64b21c5b0606f23d7445fa6a8d6db4e456e77ea452e904219",
+    "research_lab/learning/experiment.py": "3a1ad0d02e743453de7e9aa05a128c6eb1bb9bdd49d98e1cdea3255d3fd8b223",
+    "research_lab/learning/report.py": "3b80717e4fe2b6132cb51e5d4fb06962077074865c8056aeba45dfe1d38aad01",
+    "research_lab/learning/types.py": "877fcc49b0ef52ab6a8c35dc656bb0f973ea06eb1e410cf7d30feef83a9523eb",
+    "research_lab/learning/worlds.py": "8071503c3133993ea8134a0e400bb139ed046bfc5d1b3e9d078b50b7a7cdc4fd",
+    "tests/test_learning.py": "028c69b3245757b29c394e50ff0a82bae1f5a42deb6346825bbef24338f8f3cb"
+  },
+  "status": "complete",
+  "teaching_turns": 374400
+}
