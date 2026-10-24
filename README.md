@@ -16,8 +16,9 @@ experiments. It runs independently of the MCP server.
   12,954 task runs and 2,990,592 newly acquired teaching answers, with tables and
   standalone PNG/SVG charts. Download HTML to view it in a browser.
 - [Research setup and full evidence archive](research/ARTIFACTS.md): test commands,
-  reproducibility instructions, and private release assets containing all saved
-  checkpoints and compressed traces.
+  reproducibility instructions, and the workspace archive containing all saved
+  checkpoints and compressed traces. GitHub release upload was blocked by an
+  authentication failure; the full archive is not stored in GitHub.
 
 The new learner reduced overconfidence on random outcomes but adapted less
 successfully to changing relay rules. Provisional concept reuse helped some new

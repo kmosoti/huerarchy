@@ -15,10 +15,19 @@ without obtaining more teacher answers. The root aggregate research report also
 preserves results from the earlier storage/retrieval and learning studies.
 
 Large SQLite checkpoints, compressed observation/prediction traces, world
-fixtures, and archived base data are saved in the private draft release tagged
-`research-2026-10-24`. The original complete archive is split into ordered parts
-below GitHub's per-asset size limit. This avoids committing gigabytes of generated
-data to Git history. A draft release has not been announced as a software release.
+fixtures, and archived base data are packaged in the original complete archive
+`inference-lab-pilot.tar.gz` (3,086,546,741 bytes). It remains available in the task
+workspace at `/workspace/inference-lab-pilot.tar.gz`. It is also split into four
+ordered parts in `/workspace/research-release-assets`, below GitHub's per-asset
+size limit.
+
+**Remote archive upload is incomplete.** Git pushes and PR creation succeeded,
+but GitHub's `uploads.github.com` endpoint rejected the cloud credentials with
+HTTP 401. The empty draft release was removed. No full archive or part files are
+stored in this Git repository or in its releases. Download the archive from the
+task workspace for durable storage elsewhere; a Git clone alone cannot recover
+these omitted files. This limitation does not affect the committed code, compact
+results, reports, or recorded observations.
 
 [artifact-inventory.json](artifact-inventory.json) records the original archive
 SHA-256, every part's SHA-256/size, and the archived files omitted from Git.
@@ -32,23 +41,33 @@ A plain Git checkout intentionally does not contain those large files.
 
 ## Restore the original evidence
 
-Run from the repository root using GitHub CLI authenticated for this private repo:
+Download `inference-lab-pilot.tar.gz` from the task workspace and place it in
+`scratch/research-2026-10-24/` in your checkout. From the repository root:
 
 ```bash
 mkdir -p scratch/research-2026-10-24
-gh release download research-2026-10-24 --repo kmosoti/huerarchy \
-  --dir scratch/research-2026-10-24
-cd scratch/research-2026-10-24
-cat inference-lab-pilot.tar.gz.part* > inference-lab-pilot.tar.gz
-sha256sum -c SHA256SUMS
-cd ../..
+python3 - <<'PY'
+import hashlib, json
+from pathlib import Path
+metadata = json.loads(Path('research/artifact-inventory.json').read_text())['archive']
+archive = Path('scratch/research-2026-10-24') / metadata['name']
+h = hashlib.sha256()
+with archive.open('rb') as stream:
+    for block in iter(lambda: stream.read(8 * 1024 * 1024), b''):
+        h.update(block)
+assert archive.stat().st_size == metadata['bytes']
+assert h.hexdigest() == metadata['sha256']
+print('Original archive size and SHA-256 verified')
+PY
 tar -xzf scratch/research-2026-10-24/inference-lab-pilot.tar.gz \
   --exclude=inference-lab/.gitignore -C research
 ```
 
 This restores the same experiment results; it does not rerun learning. Extract
 into a clean checkout or separate directory if you have local research edits.
-Asset access requires repository access. All four part files are necessary.
+Alternatively, download all four workspace part files and `SHA256SUMS`,
+concatenate `inference-lab-pilot.tar.gz.part*` into `inference-lab-pilot.tar.gz`,
+and run `sha256sum -c SHA256SUMS`. The inventory has the individual part hashes.
 
 ## Build and test the research independently
 

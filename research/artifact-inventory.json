@@ -1,7 +1,6 @@
 {
   "schema": 1,
   "repository": "kmosoti/huerarchy",
-  "release_tag": "research-2026-10-24",
   "archive": {
     "name": "inference-lab-pilot.tar.gz",
     "bytes": 3086546741,
@@ -685,5 +684,13 @@
       "bytes": 20465241,
       "sha256": "51043ae8554089e3178f62babfff29d7e42bd7a99201b921b54e9f0c7d19cb41"
     }
-  ]
+  ],
+  "planned_release_tag": "research-2026-10-24",
+  "remote_archive_upload": {
+    "status": "incomplete",
+    "endpoint": "uploads.github.com",
+    "http_status": 401,
+    "reason": "Cloud credentials rejected by release asset upload endpoint; Git pushes and PR creation succeeded. No archive assets uploaded."
+  },
+  "workspace_archive_path": "/workspace/inference-lab-pilot.tar.gz"
 }
