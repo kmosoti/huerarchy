@@ -5,6 +5,6 @@ __pycache__/
 /data/
 /models/
 
-# Full checkpoints and compressed traces are stored as research release assets.
+# Full checkpoints and compressed traces are archived separately; see ../ARTIFACTS.md.
 /results/**/*.gz
 /results/**/*.sqlite*
